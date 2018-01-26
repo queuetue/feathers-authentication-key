@@ -1,0 +1,61 @@
+{
+  "name": "@queuetue/feathers-authentication-key",
+  "description": "Api Key authentication strategy for @feathers/authentication - based on https://github.com/feathersjs/authentication-local",
+  "version": "1.0.0",
+  "homepage": "https://github.com/queuetue/feathers-authentication-key",
+  "main": "lib/",
+  "keywords": [
+    "feathers",
+    "feathers-plugin"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/queuetue/feathers-authentication-key.git"
+  },
+  "author": {
+    "name": "Scott Russell",
+    "email": "scott@queuetue.com",
+    "url": "https://queuetue.com"
+  },
+  "contributors": [],
+  "bugs": {
+    "url": "https://github.com/queuetue/feathers-authentication-key/issues"
+  },
+  "engines": {
+    "node": ">= 6"
+  },
+  "scripts": {
+    "publish": "git push origin --tags && npm run changelog && git push origin",
+    "release:patch": "npm version patch && npm publish --access public",
+    "release:minor": "npm version minor && npm publish --access public",
+    "release:major": "npm version major && npm publish --access public",
+    "release:pre": "npm version prerelease && npm publish --tag pre --access public",
+    "changelog": "github_changelog_generator && git add CHANGELOG.md && git commit -am \"Updating changelog\"",
+    "lint": "semistandard --fix",
+    "mocha": "mocha --opts mocha.opts",
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- --opts mocha.opts",
+    "test": "npm run lint && npm run coverage"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "@feathersjs/errors": "^3.0.0",
+    "debug": "^3.1.0",
+    "lodash.get": "^4.4.2",
+    "lodash.merge": "^4.6.0",
+    "lodash.omit": "^4.5.0",
+    "lodash.pick": "^4.4.0",
+    "passport-custom": "^1.0.5"
+  },
+  "devDependencies": {
+    "@feathersjs/authentication": "^2.0.0",
+    "@feathersjs/authentication-jwt": "^2.0.0",
+    "@feathersjs/express": "^1.0.0",
+    "@feathersjs/feathers": "^3.0.0",
+    "@feathersjs/socketio": "^3.0.0",
+    "body-parser": "^1.15.2",
+    "feathers-memory": "^2.0.0"
+  }
+}
