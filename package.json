@@ -1,7 +1,7 @@
 {
   "name": "@queuetue/feathers-authentication-key",
   "description": "Api Key authentication strategy for @feathers/authentication - based on https://github.com/feathersjs/authentication-local",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "homepage": "https://github.com/queuetue/feathers-authentication-key",
   "main": "lib/",
   "keywords": [
