@@ -1,4 +1,4 @@
-# @queuetue/feathers-authentication-local
+# @queuetue/feathers-authentication-key
 
 > Api Key authentication strategy for feathers-authentication using Passport without all the boilerplate.
 
